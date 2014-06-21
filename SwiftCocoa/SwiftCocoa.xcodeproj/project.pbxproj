@@ -15,6 +15,7 @@
 		E9A070A11955154200865D33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A070A01955154200865D33 /* Images.xcassets */; };
 		E9A070AD1955154200865D33 /* SwiftCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A070AC1955154200865D33 /* SwiftCocoaTests.swift */; };
 		E9A070B91955270A00865D33 /* CalculatorOld.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A070B81955270A00865D33 /* CalculatorOld.m */; };
+		E9A070BD19554C4300865D33 /* Cooker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A070BC19554C4300865D33 /* Cooker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		E9A070B71955270900865D33 /* SwiftCocoa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCocoa-Bridging-Header.h"; sourceTree = "<group>"; };
 		E9A070B81955270A00865D33 /* CalculatorOld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculatorOld.m; path = ObjectiveC/CalculatorOld.m; sourceTree = "<group>"; };
 		E9A070BA1955273A00865D33 /* CalculatorOld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorOld.h; sourceTree = "<group>"; };
+		E9A070BC19554C4300865D33 /* Cooker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cooker.swift; path = Model/Cooker.swift; sourceTree = "<group>"; };
+		E9A070BE19554CE500865D33 /* BurnerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BurnerDelegate.h; path = ObjectiveC/BurnerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		E9A070911955154200865D33 /* SwiftCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				E9A070BB19554C0700865D33 /* Model */,
 				E9A070B6195526E300865D33 /* ObjectiveC */,
 				E9A070941955154200865D33 /* AppDelegate.swift */,
 				E9A070991955154200865D33 /* MasterViewController.swift */,
@@ -123,11 +127,20 @@
 		E9A070B6195526E300865D33 /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				E9A070B71955270900865D33 /* SwiftCocoa-Bridging-Header.h */,
 				E9A070BA1955273A00865D33 /* CalculatorOld.h */,
 				E9A070B81955270A00865D33 /* CalculatorOld.m */,
-				E9A070B71955270900865D33 /* SwiftCocoa-Bridging-Header.h */,
+				E9A070BE19554CE500865D33 /* BurnerDelegate.h */,
 			);
 			name = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		E9A070BB19554C0700865D33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9A070BC19554C4300865D33 /* Cooker.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +244,7 @@
 			files = (
 				E9A070B91955270A00865D33 /* CalculatorOld.m in Sources */,
 				E9A070951955154200865D33 /* AppDelegate.swift in Sources */,
+				E9A070BD19554C4300865D33 /* Cooker.swift in Sources */,
 				E9A070981955154200865D33 /* SwiftCocoa.xcdatamodeld in Sources */,
 				E9A0709A1955154200865D33 /* MasterViewController.swift in Sources */,
 				E9A0709C1955154200865D33 /* DetailViewController.swift in Sources */,
