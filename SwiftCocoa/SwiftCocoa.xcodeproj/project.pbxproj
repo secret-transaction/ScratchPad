@@ -14,6 +14,7 @@
 		E9A0709F1955154200865D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A0709D1955154200865D33 /* Main.storyboard */; };
 		E9A070A11955154200865D33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A070A01955154200865D33 /* Images.xcassets */; };
 		E9A070AD1955154200865D33 /* SwiftCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A070AC1955154200865D33 /* SwiftCocoaTests.swift */; };
+		E9A070B91955270A00865D33 /* CalculatorOld.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A070B81955270A00865D33 /* CalculatorOld.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		E9A070A61955154200865D33 /* SwiftCocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A070AB1955154200865D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9A070AC1955154200865D33 /* SwiftCocoaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCocoaTests.swift; sourceTree = "<group>"; };
+		E9A070B71955270900865D33 /* SwiftCocoa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCocoa-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9A070B81955270A00865D33 /* CalculatorOld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculatorOld.m; path = ObjectiveC/CalculatorOld.m; sourceTree = "<group>"; };
+		E9A070BA1955273A00865D33 /* CalculatorOld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorOld.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		E9A070911955154200865D33 /* SwiftCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				E9A070B6195526E300865D33 /* ObjectiveC */,
 				E9A070941955154200865D33 /* AppDelegate.swift */,
 				E9A070991955154200865D33 /* MasterViewController.swift */,
 				E9A0709B1955154200865D33 /* DetailViewController.swift */,
@@ -113,6 +118,16 @@
 				E9A070AB1955154200865D33 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9A070B6195526E300865D33 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				E9A070BA1955273A00865D33 /* CalculatorOld.h */,
+				E9A070B81955270A00865D33 /* CalculatorOld.m */,
+				E9A070B71955270900865D33 /* SwiftCocoa-Bridging-Header.h */,
+			);
+			name = ObjectiveC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A070B91955270A00865D33 /* CalculatorOld.m in Sources */,
 				E9A070951955154200865D33 /* AppDelegate.swift in Sources */,
 				E9A070981955154200865D33 /* SwiftCocoa.xcdatamodeld in Sources */,
 				E9A0709A1955154200865D33 /* MasterViewController.swift in Sources */,
@@ -335,9 +351,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftCocoa/SwiftCocoa-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +365,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftCocoa/SwiftCocoa-Bridging-Header.h";
 			};
 			name = Release;
 		};

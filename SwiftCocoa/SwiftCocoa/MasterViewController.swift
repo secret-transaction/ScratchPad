@@ -14,6 +14,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
+    //using an Objective-C class
+    let calculatorOld: CalculatorOld = CalculatorOld(prefix: "Dr.", postFix: "Sr.")
 
     override func awakeFromNib() {
         super.awakeFromNib()
