@@ -7,8 +7,11 @@
 //
 
 #import "HELLViewController.h"
+#import "GTLHelloworld.h"
 
 @interface HELLViewController ()
+
+@property (strong, nonatomic) GTLServiceHelloworld *service;
 
 @end
 
@@ -17,13 +20,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    if (!self.service) {
+        self.service = [GTLServiceHelloworld new];
+        self.service.retryEnabled = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)pressHelow
+{
+    
+    GTLQueryHelloworld *query = [GTLQueryHelloworld queryForGreetingsListGreeting];
+    
+    void (^handler)(GTLServiceTicket *ticket, id object, NSError *error) = ^(GTLServiceTicket *ticket, id object, NSError *error) {
+        NSLog(@"ticket=%@", ticket);
+    };
+    
+    [self.service executeQuery:query completionHandler:handler];
 }
 
 @end
