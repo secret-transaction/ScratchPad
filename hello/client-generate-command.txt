@@ -1,0 +1,9 @@
+
+1.) generate java client libraries
+mvn appengine:endpoints_get_client_lib
+
+
+2.) generate ios libraries
+/Users/lbibera/Library/Developer/Xcode/DerivedData/ServiceGenerator-auogvovcdkjnxnblqocbhybotoxv/Build/Products/Debug/ServiceGenerator \
+    target/generated-sources/appengine-endpoints/WEB-INF/helloworld-v1-rpc.discovery \
+    --outputDir ../HelloIOS/HelloIOS
