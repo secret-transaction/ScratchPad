@@ -61,6 +61,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 20 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="helloworld-v1-1.18.0-rc-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="lib" exported="" />
   </component>
 </module>

@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.appspot.hello_trash.helloworld.Helloworld;
 import com.secrettransaction.demo.lib.Wazzuper;
 
 
@@ -20,6 +21,8 @@ public class MainActivity extends Activity {
 
         helloWorld = (TextView) findViewById(R.id.helloWorld);
         helloWorld.setText(Wazzuper.wazzup());
+
+        Helloworld.Builder builder = null;
     }
 
 
