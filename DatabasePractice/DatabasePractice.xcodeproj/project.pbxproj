@@ -24,6 +24,7 @@
 		E9773703196AF96700699866 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9773701196AF96700699866 /* Model.xcdatamodeld */; };
 		E9773705196AFC2100699866 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9773704196AFC2100699866 /* CoreData.framework */; };
 		E9A6C85A196D382A00730569 /* STDPersonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A6C859196D382A00730569 /* STDPersonTableViewController.m */; };
+		E9A6C85E196D3E8000730569 /* STDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A6C85D196D3E8000730569 /* STDTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		E9773704196AFC2100699866 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E9A6C858196D382A00730569 /* STDPersonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPersonTableViewController.h; sourceTree = "<group>"; };
 		E9A6C859196D382A00730569 /* STDPersonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPersonTableViewController.m; sourceTree = "<group>"; };
+		E9A6C85C196D3E8000730569 /* STDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDTableViewCell.h; sourceTree = "<group>"; };
+		E9A6C85D196D3E8000730569 /* STDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 		E94593B5196AAE8D00B64E68 /* DatabasePractice */ = {
 			isa = PBXGroup;
 			children = (
+				E9A6C85B196D3E5E00730569 /* Views */,
 				E9A6C858196D382A00730569 /* STDPersonTableViewController.h */,
 				E9A6C859196D382A00730569 /* STDPersonTableViewController.m */,
 				E94593BE196AAE8D00B64E68 /* STDAppDelegate.h */,
@@ -162,6 +166,15 @@
 				E94593D7196AAE8E00B64E68 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9A6C85B196D3E5E00730569 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9A6C85C196D3E8000730569 /* STDTableViewCell.h */,
+				E9A6C85D196D3E8000730569 /* STDTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +280,7 @@
 				E94593C0196AAE8D00B64E68 /* STDAppDelegate.m in Sources */,
 				E94593BC196AAE8D00B64E68 /* main.m in Sources */,
 				E9773703196AF96700699866 /* Model.xcdatamodeld in Sources */,
+				E9A6C85E196D3E8000730569 /* STDTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
