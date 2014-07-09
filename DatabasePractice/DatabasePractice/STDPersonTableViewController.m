@@ -8,6 +8,7 @@
 
 #import "STDPersonTableViewController.h"
 #import "STDTableViewCell.h"
+#import "STDAppDelegate.h"
 
 @interface STDPersonTableViewController ()
 
@@ -45,7 +46,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    STDAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    NSManagedObjectContext *context = appDelegate.managedObjectContext;
+    
+    
+    NSFetchRequest *request = [NSFetchRequest new];
+    [request setEntity:[NSEntityDescription entityForName:@"Person" inManagedObjectContext:context]];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"address" ascending:NO];
+    request.sortDescriptors = @[sortDescriptor];
+    
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:@"name" cacheName:@"Master"];
+    [fetchedResultsController performFetch:nil];
+    
+    return [[fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
