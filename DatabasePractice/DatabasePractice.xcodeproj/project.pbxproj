@@ -23,6 +23,7 @@
 		E94593DB196AAE8E00B64E68 /* DatabasePracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94593DA196AAE8E00B64E68 /* DatabasePracticeTests.m */; };
 		E9773703196AF96700699866 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9773701196AF96700699866 /* Model.xcdatamodeld */; };
 		E9773705196AFC2100699866 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9773704196AFC2100699866 /* CoreData.framework */; };
+		E9A6C85A196D382A00730569 /* STDPersonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A6C859196D382A00730569 /* STDPersonTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		E94593DA196AAE8E00B64E68 /* DatabasePracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabasePracticeTests.m; sourceTree = "<group>"; };
 		E9773702196AF96700699866 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E9773704196AFC2100699866 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E9A6C858196D382A00730569 /* STDPersonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPersonTableViewController.h; sourceTree = "<group>"; };
+		E9A6C859196D382A00730569 /* STDPersonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPersonTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		E94593B5196AAE8D00B64E68 /* DatabasePractice */ = {
 			isa = PBXGroup;
 			children = (
+				E9A6C858196D382A00730569 /* STDPersonTableViewController.h */,
+				E9A6C859196D382A00730569 /* STDPersonTableViewController.m */,
 				E94593BE196AAE8D00B64E68 /* STDAppDelegate.h */,
 				E94593BF196AAE8D00B64E68 /* STDAppDelegate.m */,
 				E94593C1196AAE8D00B64E68 /* Main.storyboard */,
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94593C6196AAE8D00B64E68 /* STDViewController.m in Sources */,
+				E9A6C85A196D382A00730569 /* STDPersonTableViewController.m in Sources */,
 				E94593C0196AAE8D00B64E68 /* STDAppDelegate.m in Sources */,
 				E94593BC196AAE8D00B64E68 /* main.m in Sources */,
 				E9773703196AF96700699866 /* Model.xcdatamodeld in Sources */,

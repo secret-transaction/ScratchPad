@@ -43,6 +43,12 @@
     
     NSError *error;
     [context save:&error];
+    
+    if (!error) {
+        self.name.text = @"";
+        self.address.text = @"";
+        [self performSegueWithIdentifier:@"ShowTableSegue" sender:nil];
+    }
 }
 
 @end
