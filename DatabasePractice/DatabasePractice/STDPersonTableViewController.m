@@ -46,6 +46,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    return [[self.fetchedResultsController sections] count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    return [sectionInfo numberOfObjects];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    STDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"defaultCell" forIndexPath:indexPath];
+    
+    NSManagedObject *person = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.nameLabel.text = [[person valueForKey:@"name"] description];
+    cell.addressLabel.text = [[person valueForKey:@"address"] description];
+    
+    return cell;
+}
+
+#pragma mark - Fetched Results Controller
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
     STDAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
@@ -57,25 +85,36 @@
     request.sortDescriptors = @[sortDescriptor];
     
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:@"name" cacheName:@"Master"];
-    [fetchedResultsController performFetch:nil];
     
-    return [[fetchedResultsController sections] count];
+    NSError *error = nil;
+    if (![fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    } else {
+        self.fetchedResultsController = fetchedResultsController;
+    }
+    
+    return _fetchedResultsController;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    STDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"defaultCell" forIndexPath:indexPath];
-    
-    cell.nameLabel.text = @"Name Test";
-    cell.addressLabel.text = @"Address Test";
-    
-    return cell;
-}
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

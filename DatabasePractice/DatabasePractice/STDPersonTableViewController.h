@@ -10,4 +10,6 @@
 
 @interface STDPersonTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
 @end
