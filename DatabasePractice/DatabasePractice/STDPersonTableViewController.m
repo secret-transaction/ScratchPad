@@ -61,13 +61,19 @@
     
     NSManagedObject *person = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.nameLabel.text = [[person valueForKey:@"name"] description];
     cell.addressLabel.text = [[person valueForKey:@"address"] description];
     
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+   return [sectionInfo name];
+}
+
 #pragma mark - Fetched Results Controller
+
 - (NSFetchedResultsController *)fetchedResultsController
 {
     if (_fetchedResultsController != nil) {
@@ -81,7 +87,7 @@
     
     NSFetchRequest *request = [NSFetchRequest new];
     [request setEntity:[NSEntityDescription entityForName:@"Person" inManagedObjectContext:context]];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"address" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     request.sortDescriptors = @[sortDescriptor];
     
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:@"name" cacheName:@"Master"];

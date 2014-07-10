@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface STDTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @end
