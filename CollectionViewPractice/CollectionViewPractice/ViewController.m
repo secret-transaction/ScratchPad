@@ -5,8 +5,11 @@
 //  Created by Lyndon Michael Bibera on 7/21/14.
 //  Copyright (c) 2014 Secret Transaction Inc. All rights reserved.
 //
+//  special tnx for this dude's mini-guide:
+//  http://www.techotopia.com/index.php/An_iOS_7_Storyboard-based_Collection_View_Tutorial
 
 #import "ViewController.h"
+#import "MyCell.h"
 
 @interface ViewController ()
 
@@ -17,13 +20,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	self.images = @[@"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.wpclipart.com/cartoon/people/kids/boy_cartoons/boy_scientist_T.png",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg"];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Collection View Data Source And Delegates
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return self.images.count == 0 ? 0 : 1;
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.images.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                 cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MyCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
+    myCell.imageUrl = self.images[[indexPath row]];
+    
+    return myCell;
+}
+
 
 @end

@@ -10,6 +10,6 @@
 
 @interface ViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDataSource>
 
-@property (strong, nonatomic) NSMutableArray *images;
+@property (strong, nonatomic) NSArray *images;
 
 @end
