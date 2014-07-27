@@ -65,19 +65,16 @@ public class GalleryAdapter extends BaseAdapter {
         Integer lastPosition = 0;
 
         View get(Integer position) {
-            View attemptRight = cache.get(position+5);
-            View attemptLeft = cache.get(position-5);
+            int cacheAdvance = 5;
 
-            if (attemptRight != null) {
-                cache.remove(position+5);
+            if (direction(position) > 0) { //if moving towards left
+                View v = cache.get(position+cacheAdvance);
+                cache.remove(position+cacheAdvance);
+                return v;
             } else {
-                cache.remove(position-5);
-            }
-
-            if (direction(position) > 0) {
-                return attemptLeft == null ? attemptRight : attemptLeft;
-            } else {
-                return attemptRight == null ? attemptLeft : attemptRight;
+                View v = cache.get(position-cacheAdvance);
+                cache.remove(position-cacheAdvance);
+                return v;
             }
         }
 
