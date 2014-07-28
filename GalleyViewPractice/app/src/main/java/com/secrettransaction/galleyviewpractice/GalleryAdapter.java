@@ -8,7 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Vector;
 
 /**
@@ -61,31 +63,20 @@ public class GalleryAdapter extends BaseAdapter {
     }
 
     class Recycler {
-        Map<Integer, View> cache = new HashMap<Integer, View>();
-        Integer lastPosition = 0;
+        Queue<View> viewQueue = new LinkedList<View>();
 
         View get(Integer position) {
-            int cacheAdvance = 5;
+            View v = null;
 
-            if (direction(position) > 0) { //if moving towards left
-                View v = cache.get(position+cacheAdvance);
-                cache.remove(position+cacheAdvance);
-                return v;
-            } else {
-                View v = cache.get(position-cacheAdvance);
-                cache.remove(position-cacheAdvance);
-                return v;
+            if (viewQueue.size() > 10) {
+                v = viewQueue.remove();
             }
-        }
 
-        private Integer direction(Integer position) {
-            Integer dir = lastPosition - position;
-            lastPosition = position;
-            return dir;
+            return v;
         }
 
         void put(Integer position, View view) {
-            cache.put(position, view);
+            viewQueue.add(view);
         }
     }
 }
