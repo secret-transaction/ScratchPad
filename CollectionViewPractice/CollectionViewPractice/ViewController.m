@@ -21,7 +21,40 @@
 {
     [super viewDidLoad];
 	self.images = @[@"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
-                    @"http://www.wpclipart.com/cartoon/people/kids/boy_cartoons/boy_scientist_T.png",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
+                    @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg",
+                    @"http://www.how-to-draw-funny-cartoons.com/image-files/scientist-cartoon-008.jpg",
+                    @"http://www.picturesnew.com/media/images/cars_farrari.jpg",
                     @"http://www.cttechact.com/news/images/Summer2012/Summer2012_07.jpg"];
 }
 
@@ -44,6 +77,13 @@
     myCell.imageUrl = self.images[[indexPath row]];
     
     return myCell;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize size = CGSizeMake(100, 100);
+    
+    return size;
 }
 
 

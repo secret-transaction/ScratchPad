@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A220DF3B-21BF-4FB1-B00B-89D91A311725</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CollectionViewPractice</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DBB3C8D9-CDCA-4F3C-88B3-330A762EAE0C</key>
+		<string>ssh://github.com/secret-transaction/ScratchPad.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CollectionViewPractice/CollectionViewPractice.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DBB3C8D9-CDCA-4F3C-88B3-330A762EAE0C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/secret-transaction/ScratchPad.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DBB3C8D9-CDCA-4F3C-88B3-330A762EAE0C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DBB3C8D9-CDCA-4F3C-88B3-330A762EAE0C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScratchPad</string>
+		</dict>
+	</array>
+</dict>
+</plist>

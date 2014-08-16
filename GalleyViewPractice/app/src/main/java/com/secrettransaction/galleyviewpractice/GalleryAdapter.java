@@ -1,5 +1,6 @@
 package com.secrettransaction.galleyviewpractice;
 
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +19,13 @@ import java.util.Vector;
  */
 public class GalleryAdapter extends BaseAdapter {
 
-    private Recycler recycler = new Recycler();
+    private static final String TAG = GalleryAdapter.class.getSimpleName();
+
+//    private Recycler recycler = new Recycler();
 
     @Override
     public int getCount() {
-        return 100;
+        return 7;
     }
 
     @Override
@@ -37,11 +40,11 @@ public class GalleryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Log.d("POS", "Pos=" + position);
+        Log.d(TAG, "Position=" + position);
 
-        if (convertView==null) {
-            convertView = recycler.get(position);
-        }
+//        if (convertView==null) {
+//            convertView = recycler.get(position);
+//        }
 
         if (convertView==null) {
             Log.d("CREATE", "New");
@@ -49,34 +52,53 @@ public class GalleryAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(Application.getContext()).inflate(R.layout.view_gallery_item, parent, false);
         }
 
-        recycler.put(position, convertView);
+//        recycler.put(position, convertView);
 
         ImageView im = (ImageView) convertView.findViewById(R.id.imageView);
 
-        if (position%2==0) {
-            im.setBackgroundResource(R.drawable.droid1);
+        Context ctx = Application.getContext();
+
+        if (position == 0) {
+            im.setImageDrawable(ctx.getResources().getDrawable(R.drawable.droid1));
+            //im.setBackgroundResource(R.drawable.droid1);
+        }  else if (position == 1) {
+            im.setImageDrawable(ctx.getResources().getDrawable(R.drawable.droid2));
+            //im.setBackgroundResource(R.drawable.droid2);
+        } else if (position == 2) {
+            im.setImageDrawable(ctx.getResources().getDrawable(R.drawable.droid3));
+            //im.setBackgroundResource(R.drawable.droid3);
+        } else if (position == 3) {
+            im.setImageDrawable(ctx.getResources().getDrawable(R.drawable.droid4));
+            //im.setBackgroundResource(R.drawable.droid4);
+        } else if (position == 4) {
+            im.setImageDrawable(ctx.getResources().getDrawable(R.drawable.droid5));
+            //im.setBackgroundResource(R.drawable.droid5);
+        } else if (position == 5) {
+            im.setImageDrawable(ctx.getResources().getDrawable(R.drawable.droid6));
+            //im.setBackgroundResource(R.drawable.droid6);
         } else {
-            im.setBackgroundResource(R.drawable.droid3);
+            im.setImageDrawable(ctx.getResources().getDrawable(R.drawable.droid7));
+            //im.setBackgroundResource(R.drawable.droid7);
         }
 
         return convertView;
     }
 
-    class Recycler {
-        Queue<View> viewQueue = new LinkedList<View>();
-
-        View get(Integer position) {
-            View v = null;
-
-            if (viewQueue.size() > 10) {
-                v = viewQueue.remove();
-            }
-
-            return v;
-        }
-
-        void put(Integer position, View view) {
-            viewQueue.add(view);
-        }
-    }
+//    class Recycler {
+//        Queue<View> viewQueue = new LinkedList<View>();
+//
+//        View get(Integer position) {
+//            View v = null;
+//
+//            if (viewQueue.size() > 10) {
+//                v = viewQueue.remove();
+//            }
+//
+//            return v;
+//        }
+//
+//        void put(Integer position, View view) {
+//            viewQueue.add(view);
+//        }
+//    }
 }
