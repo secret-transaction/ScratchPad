@@ -85,7 +85,7 @@
     
     NSFetchRequest *request = [NSFetchRequest new];
     [request setEntity:[NSEntityDescription entityForName:@"SampleEntity" inManagedObjectContext:self.context]];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateCreated" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateCreated" ascending:YES];
     request.sortDescriptors = @[sortDescriptor];
     
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.context sectionNameKeyPath:@"dateCreated" cacheName:@"mainCache"];
