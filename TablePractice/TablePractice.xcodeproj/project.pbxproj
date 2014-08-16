@@ -15,7 +15,6 @@
 		E99A4D72199F610B00AC1E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E99A4D71199F610B00AC1E70 /* AppDelegate.m */; };
 		E99A4D75199F610B00AC1E70 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99A4D73199F610B00AC1E70 /* Main_iPhone.storyboard */; };
 		E99A4D78199F610B00AC1E70 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99A4D76199F610B00AC1E70 /* Main_iPad.storyboard */; };
-		E99A4D7B199F610B00AC1E70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99A4D7A199F610B00AC1E70 /* ViewController.m */; };
 		E99A4D7D199F610B00AC1E70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99A4D7C199F610B00AC1E70 /* Images.xcassets */; };
 		E99A4D84199F610B00AC1E70 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99A4D83199F610B00AC1E70 /* XCTest.framework */; };
 		E99A4D85199F610B00AC1E70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99A4D61199F610A00AC1E70 /* Foundation.framework */; };
@@ -25,6 +24,9 @@
 		E99A4D9B199F612900AC1E70 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E99A4D99199F612900AC1E70 /* Model.xcdatamodeld */; };
 		E99A4D9E199F622B00AC1E70 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E99A4D9D199F622B00AC1E70 /* SampleTableViewCell.m */; };
 		E99A4DA1199F625100AC1E70 /* SampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99A4DA0199F625100AC1E70 /* SampleTableViewController.m */; };
+		E99A4DA4199F648A00AC1E70 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E99A4DA3199F648A00AC1E70 /* DataManager.m */; };
+		E99A4DA6199F64B400AC1E70 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99A4DA5199F64B400AC1E70 /* CoreData.framework */; };
+		E99A4DA9199F658D00AC1E70 /* SampleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E99A4DA8199F658D00AC1E70 /* SampleEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +52,6 @@
 		E99A4D71199F610B00AC1E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E99A4D74199F610B00AC1E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		E99A4D77199F610B00AC1E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		E99A4D79199F610B00AC1E70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E99A4D7A199F610B00AC1E70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E99A4D7C199F610B00AC1E70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E99A4D82199F610B00AC1E70 /* TablePracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TablePracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99A4D83199F610B00AC1E70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -63,6 +63,11 @@
 		E99A4D9D199F622B00AC1E70 /* SampleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTableViewCell.m; sourceTree = "<group>"; };
 		E99A4D9F199F625100AC1E70 /* SampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTableViewController.h; sourceTree = "<group>"; };
 		E99A4DA0199F625100AC1E70 /* SampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTableViewController.m; sourceTree = "<group>"; };
+		E99A4DA2199F648A00AC1E70 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		E99A4DA3199F648A00AC1E70 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		E99A4DA5199F64B400AC1E70 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E99A4DA7199F658D00AC1E70 /* SampleEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleEntity.h; sourceTree = "<group>"; };
+		E99A4DA8199F658D00AC1E70 /* SampleEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99A4DA6199F64B400AC1E70 /* CoreData.framework in Frameworks */,
 				E99A4D64199F610A00AC1E70 /* CoreGraphics.framework in Frameworks */,
 				E99A4D66199F610A00AC1E70 /* UIKit.framework in Frameworks */,
 				E99A4D62199F610A00AC1E70 /* Foundation.framework in Frameworks */,
@@ -111,6 +117,7 @@
 		E99A4D60199F610A00AC1E70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E99A4DA5199F64B400AC1E70 /* CoreData.framework */,
 				E99A4D61199F610A00AC1E70 /* Foundation.framework */,
 				E99A4D63199F610A00AC1E70 /* CoreGraphics.framework */,
 				E99A4D65199F610A00AC1E70 /* UIKit.framework */,
@@ -126,10 +133,8 @@
 				E99A4DA0199F625100AC1E70 /* SampleTableViewController.m */,
 				E99A4D9C199F622B00AC1E70 /* SampleTableViewCell.h */,
 				E99A4D9D199F622B00AC1E70 /* SampleTableViewCell.m */,
-				E99A4D70199F610B00AC1E70 /* AppDelegate.h */,
-				E99A4D71199F610B00AC1E70 /* AppDelegate.m */,
-				E99A4D79199F610B00AC1E70 /* ViewController.h */,
-				E99A4D7A199F610B00AC1E70 /* ViewController.m */,
+				E99A4DA7199F658D00AC1E70 /* SampleEntity.h */,
+				E99A4DA8199F658D00AC1E70 /* SampleEntity.m */,
 				E99A4D73199F610B00AC1E70 /* Main_iPhone.storyboard */,
 				E99A4D76199F610B00AC1E70 /* Main_iPad.storyboard */,
 				E99A4D99199F612900AC1E70 /* Model.xcdatamodeld */,
@@ -142,6 +147,10 @@
 		E99A4D68199F610B00AC1E70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E99A4DA2199F648A00AC1E70 /* DataManager.h */,
+				E99A4DA3199F648A00AC1E70 /* DataManager.m */,
+				E99A4D70199F610B00AC1E70 /* AppDelegate.h */,
+				E99A4D71199F610B00AC1E70 /* AppDelegate.m */,
 				E99A4D69199F610B00AC1E70 /* TablePractice-Info.plist */,
 				E99A4D6A199F610B00AC1E70 /* InfoPlist.strings */,
 				E99A4D6D199F610B00AC1E70 /* main.m */,
@@ -266,8 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E99A4D7B199F610B00AC1E70 /* ViewController.m in Sources */,
 				E99A4DA1199F625100AC1E70 /* SampleTableViewController.m in Sources */,
+				E99A4DA4199F648A00AC1E70 /* DataManager.m in Sources */,
+				E99A4DA9199F658D00AC1E70 /* SampleEntity.m in Sources */,
 				E99A4D72199F610B00AC1E70 /* AppDelegate.m in Sources */,
 				E99A4D9E199F622B00AC1E70 /* SampleTableViewCell.m in Sources */,
 				E99A4D6E199F610B00AC1E70 /* main.m in Sources */,

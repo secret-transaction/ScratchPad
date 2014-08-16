@@ -8,8 +8,12 @@
 
 #import "SampleTableViewController.h"
 #import "SampleTableViewCell.h"
+#import "SampleEntity.h"
+#import "DataManager.h"
 
 @interface SampleTableViewController ()
+
+@property BOOL hasNewData;
 
 @end
 
@@ -18,78 +22,76 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.context =  [[DataManager sharedInstance] managedObjectContext];
+}
+
+- (IBAction)add:(id)sender
+{
+    NSLog(@"Adding Item");
+    SampleEntity *en = [NSEntityDescription insertNewObjectForEntityForName:@"SampleEntity" inManagedObjectContext:self.context];
+    
+    en.title = @"Test";
+    en.details = @"Details...";
+    en.isPrivate = NO;
+    en.dateCreated = [[NSDate alloc] init];
+    
+    [[DataManager sharedInstance] saveContext];
+    self.hasNewData = YES;
+    
+    [self.tableView reloadData];
+    
+    NSIndexPath *indexPath = [self.fetchedResultsController indexPathForObject:en];
+    
+    //scrolling bwahahaha
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    return [sectionInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SampleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sampleCell" forIndexPath:indexPath];
     
-    cell.title.text = @"test";
+    cell.cellTitle.text = @"test";
     cell.details.text = @"test details";
     cell.date.text = @"June 1, 2000";
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSFetchedResultsController *)fetchedResultsController
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    if (_fetchedResultsController != nil && !self.hasNewData) {
+        self.hasNewData = NO;
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *request = [NSFetchRequest new];
+    [request setEntity:[NSEntityDescription entityForName:@"SampleEntity" inManagedObjectContext:self.context]];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateCreated" ascending:NO];
+    request.sortDescriptors = @[sortDescriptor];
+    
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.context sectionNameKeyPath:@"dateCreated" cacheName:@"mainCache"];
+    
+    NSError *error = nil;
+    if (![fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    } else {
+        self.fetchedResultsController = fetchedResultsController;
+    }
+    
+    return _fetchedResultsController;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

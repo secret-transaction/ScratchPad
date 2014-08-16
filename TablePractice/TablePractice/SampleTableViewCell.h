@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SampleTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *cellTitle;
 @property (weak, nonatomic) IBOutlet UITextView *details;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 

@@ -10,4 +10,7 @@
 
 @interface SampleTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
 @end
