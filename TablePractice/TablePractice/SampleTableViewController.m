@@ -33,7 +33,7 @@
     en.title = @"Test";
     en.details = @"Details...";
     en.isPrivate = NO;
-    en.dateCreated = [[NSDate alloc] init];
+    en.dateCreated = [NSDate date];
     
     [[DataManager sharedInstance] saveContext];
     self.hasNewData = YES;
@@ -63,9 +63,15 @@
 {
     SampleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sampleCell" forIndexPath:indexPath];
     
-    cell.cellTitle.text = @"test";
-    cell.details.text = @"test details";
-    cell.date.text = @"June 1, 2000";
+    SampleEntity *en = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.cellTitle.text = en.title;
+    cell.details.text = en.details;
+    
+    //TODO: share object instance
+    NSDateFormatter *objDateFormatter = [[NSDateFormatter alloc] init];
+    [objDateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    cell.date.text = [objDateFormatter stringFromDate:en.dateCreated];
     
     return cell;
 }
