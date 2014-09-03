@@ -23,6 +23,7 @@
 		E96F5A6A19B6E799005D15AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E96F5A6819B6E799005D15AD /* InfoPlist.strings */; };
 		E96F5A6C19B6E799005D15AD /* Card_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E96F5A6B19B6E799005D15AD /* Card_GameTests.m */; };
 		E9DA1C4119B6E9D3006D1D91 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4019B6E9D3006D1D91 /* Card.m */; };
+		E9DA1C4419B6F448006D1D91 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4319B6F448006D1D91 /* Deck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		E96F5A6B19B6E799005D15AD /* Card_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card_GameTests.m; sourceTree = "<group>"; };
 		E9DA1C3F19B6E9D3006D1D91 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		E9DA1C4019B6E9D3006D1D91 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		E9DA1C4219B6F448006D1D91 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		E9DA1C4319B6F448006D1D91 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 			children = (
 				E9DA1C3F19B6E9D3006D1D91 /* Card.h */,
 				E9DA1C4019B6E9D3006D1D91 /* Card.m */,
+				E9DA1C4219B6F448006D1D91 /* Deck.h */,
+				E9DA1C4319B6F448006D1D91 /* Deck.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DA1C4419B6F448006D1D91 /* Deck.m in Sources */,
 				E96F5A5719B6E799005D15AD /* ViewController.m in Sources */,
 				E96F5A4E19B6E799005D15AD /* AppDelegate.m in Sources */,
 				E96F5A4A19B6E799005D15AD /* main.m in Sources */,
