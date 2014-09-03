@@ -17,5 +17,6 @@
 #pragma mark - Class Methods
 + (NSArray *)validSuits;
 + (NSArray *)rankStrings;
++ (NSUInteger)maxRank;
 
 @end

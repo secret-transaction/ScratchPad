@@ -25,6 +25,7 @@
 		E9DA1C4119B6E9D3006D1D91 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4019B6E9D3006D1D91 /* Card.m */; };
 		E9DA1C4419B6F448006D1D91 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4319B6F448006D1D91 /* Deck.m */; };
 		E9DA1C4719B6F946006D1D91 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4619B6F946006D1D91 /* PlayingCard.m */; };
+		E9DA1C4A19B7011E006D1D91 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4919B7011E006D1D91 /* PlayingCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,8 @@
 		E96F5A4D19B6E799005D15AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E96F5A5019B6E799005D15AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		E96F5A5319B6E799005D15AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		E96F5A5519B6E799005D15AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E96F5A5619B6E799005D15AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E96F5A5519B6E799005D15AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "Card Game/ViewController.h"; sourceTree = SOURCE_ROOT; };
+		E96F5A5619B6E799005D15AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Card Game/ViewController.m"; sourceTree = SOURCE_ROOT; };
 		E96F5A5819B6E799005D15AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E96F5A5E19B6E799005D15AD /* Card GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Card GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96F5A5F19B6E799005D15AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,6 +65,8 @@
 		E9DA1C4319B6F448006D1D91 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		E9DA1C4519B6F946006D1D91 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
 		E9DA1C4619B6F946006D1D91 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		E9DA1C4819B7011E006D1D91 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		E9DA1C4919B7011E006D1D91 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +126,12 @@
 		E96F5A4319B6E799005D15AD /* Card Game */ = {
 			isa = PBXGroup;
 			children = (
+				E9DA1C4B19B70E40006D1D91 /* ViewController */,
 				E9DA1C3E19B6E9A4006D1D91 /* Model */,
 				E96F5A4C19B6E799005D15AD /* AppDelegate.h */,
 				E96F5A4D19B6E799005D15AD /* AppDelegate.m */,
 				E96F5A4F19B6E799005D15AD /* Main_iPhone.storyboard */,
 				E96F5A5219B6E799005D15AD /* Main_iPad.storyboard */,
-				E96F5A5519B6E799005D15AD /* ViewController.h */,
-				E96F5A5619B6E799005D15AD /* ViewController.m */,
 				E96F5A5819B6E799005D15AD /* Images.xcassets */,
 				E96F5A4419B6E799005D15AD /* Supporting Files */,
 			);
@@ -174,8 +176,19 @@
 				E9DA1C4319B6F448006D1D91 /* Deck.m */,
 				E9DA1C4519B6F946006D1D91 /* PlayingCard.h */,
 				E9DA1C4619B6F946006D1D91 /* PlayingCard.m */,
+				E9DA1C4819B7011E006D1D91 /* PlayingCardDeck.h */,
+				E9DA1C4919B7011E006D1D91 /* PlayingCardDeck.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E9DA1C4B19B70E40006D1D91 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E96F5A5519B6E799005D15AD /* ViewController.h */,
+				E96F5A5619B6E799005D15AD /* ViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +293,7 @@
 				E9DA1C4419B6F448006D1D91 /* Deck.m in Sources */,
 				E96F5A5719B6E799005D15AD /* ViewController.m in Sources */,
 				E96F5A4E19B6E799005D15AD /* AppDelegate.m in Sources */,
+				E9DA1C4A19B7011E006D1D91 /* PlayingCardDeck.m in Sources */,
 				E96F5A4A19B6E799005D15AD /* main.m in Sources */,
 				E9DA1C4119B6E9D3006D1D91 /* Card.m in Sources */,
 			);

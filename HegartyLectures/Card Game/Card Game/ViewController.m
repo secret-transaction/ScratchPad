@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *card;
+@property (nonatomic, getter = isBack) BOOL back;
+
 @end
 
 @implementation ViewController
@@ -17,13 +20,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)touchCardButton:(UIButton *)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *backgroundImage = @"card_front";
+    if (self.isBack) {
+        backgroundImage = @"card_back";
+    }
+    
+    NSLog(@"Set Image:%@", backgroundImage);
+    
+    [sender setBackgroundImage:[UIImage imageNamed:backgroundImage] forState:UIControlStateNormal];
+    
+    self.back = !self.isBack;
 }
 
 @end
