@@ -26,6 +26,7 @@
 		E9DA1C4419B6F448006D1D91 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4319B6F448006D1D91 /* Deck.m */; };
 		E9DA1C4719B6F946006D1D91 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4619B6F946006D1D91 /* PlayingCard.m */; };
 		E9DA1C4A19B7011E006D1D91 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1C4919B7011E006D1D91 /* PlayingCardDeck.m */; };
+		E9DC27E719B9560A00AFAEB2 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DC27E619B9560A00AFAEB2 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		E9DA1C4619B6F946006D1D91 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
 		E9DA1C4819B7011E006D1D91 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
 		E9DA1C4919B7011E006D1D91 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+		E9DC27E519B9560A00AFAEB2 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		E9DC27E619B9560A00AFAEB2 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				E9DA1C4619B6F946006D1D91 /* PlayingCard.m */,
 				E9DA1C4819B7011E006D1D91 /* PlayingCardDeck.h */,
 				E9DA1C4919B7011E006D1D91 /* PlayingCardDeck.m */,
+				E9DC27E519B9560A00AFAEB2 /* CardMatchingGame.h */,
+				E9DC27E619B9560A00AFAEB2 /* CardMatchingGame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				E9DA1C4419B6F448006D1D91 /* Deck.m in Sources */,
 				E96F5A5719B6E799005D15AD /* ViewController.m in Sources */,
 				E96F5A4E19B6E799005D15AD /* AppDelegate.m in Sources */,
+				E9DC27E719B9560A00AFAEB2 /* CardMatchingGame.m in Sources */,
 				E9DA1C4A19B7011E006D1D91 /* PlayingCardDeck.m in Sources */,
 				E96F5A4A19B6E799005D15AD /* main.m in Sources */,
 				E9DA1C4119B6E9D3006D1D91 /* Card.m in Sources */,
