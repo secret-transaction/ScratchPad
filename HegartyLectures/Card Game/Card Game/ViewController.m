@@ -7,45 +7,33 @@
 //
 
 #import "ViewController.h"
+#import "CardMatchingGame.h"
+#import "Deck.h"
 
 @interface ViewController ()
 
 //views are held by the ViewController using a weak
 //pointer, because the view is held strongly by the root view
-@property (weak, nonatomic) IBOutlet UIButton *card;
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 
-@property (nonatomic, getter = isBack) BOOL back;
-@property (nonatomic) int flipCount;
+@property (strong, nonatomic) CardMatchingGame *game;
+@property (strong, nonatomic) Deck *deck;
 
 @end
 
 @implementation ViewController
 
-- (void)setFlipCount:(int)flipCount
+- (CardMatchingGame *)game
 {
-    _flipCount = flipCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %i", _flipCount];
+    if (_game) {
+        _game = [[CardMatchingGame alloc] initWithCardCount:1 usingDeck:nil];
+    }
+    
+    return _game;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
-- (IBAction)touchCardButton:(UIButton *)sender
-{
-    NSString *backgroundImage = @"card_front";
-    if (self.isBack) {
-        backgroundImage = @"card_back";
-    }
-    
-    NSLog(@"Set Image:%@", backgroundImage);
-    
-    [sender setBackgroundImage:[UIImage imageNamed:backgroundImage] forState:UIControlStateNormal];
-    
-    self.back = !self.isBack;
-    self.flipCount++;
 }
 
 @end
