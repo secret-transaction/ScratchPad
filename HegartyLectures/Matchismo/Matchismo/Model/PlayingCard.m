@@ -54,7 +54,7 @@
 
 + (NSUInteger)maxRank
 {
-    return 15;
+    return 13;
 }
 
 @end
