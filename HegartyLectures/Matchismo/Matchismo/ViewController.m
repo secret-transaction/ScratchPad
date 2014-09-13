@@ -10,18 +10,32 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (nonatomic) NSUInteger flipsCount;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+//IBAction is actually void - not used by compiler, only XCode uses this
+- (IBAction)touchCardButton:(UIButton *)sender
+{
+    NSLog(@"Touched");
+    
+    if ([sender.currentTitle length]) {
+        [sender setTitle:@"" forState:UIControlStateNormal];
+    } else {
+        [sender setTitle:@"A♣︎" forState:UIControlStateNormal];
+    }
+    
+    self.flipsCount++;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setFlipsCount:(NSUInteger)flipsCount
+{
+    _flipsCount = flipsCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %lu", _flipsCount];
 }
+
 
 @end
