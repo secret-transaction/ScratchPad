@@ -34,7 +34,7 @@
 - (void)setFlipsCount:(NSUInteger)flipsCount
 {
     _flipsCount = flipsCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %lu", _flipsCount];
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %lu", (unsigned long)_flipsCount];
 }
 
 

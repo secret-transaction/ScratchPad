@@ -17,17 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFc-Ay-suC">
-                                <rect key="frame" x="224" y="292" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ry-gQ-l8j">
+                                <rect key="frame" x="268" y="252" width="64" height="96"/>
                                 <state key="normal" title="A♣︎">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jjm-2R-Ya7"/>
+                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHI-hV-CiJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o71-rz-2Zc">
-                                <rect key="frame" x="16" y="559" width="512" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ4-vR-Hu8">
+                                <rect key="frame" x="16" y="559" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,15 +35,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o71-rz-2Zc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8cO-I1-xwT"/>
-                            <constraint firstAttribute="centerY" secondItem="iFc-Ay-suC" secondAttribute="centerY" id="Nhy-JH-YTJ"/>
-                            <constraint firstAttribute="centerX" secondItem="iFc-Ay-suC" secondAttribute="centerX" id="Nmy-h9-v5b"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o71-rz-2Zc" secondAttribute="bottom" constant="20" id="aGs-Ry-uB8"/>
+                            <constraint firstAttribute="centerY" secondItem="5Ry-gQ-l8j" secondAttribute="centerY" id="0Wa-9T-s9Q"/>
+                            <constraint firstItem="jZ4-vR-Hu8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="anX-Mo-AE5"/>
+                            <constraint firstAttribute="centerX" secondItem="5Ry-gQ-l8j" secondAttribute="centerX" id="cNu-Ah-NYr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jZ4-vR-Hu8" secondAttribute="bottom" constant="20" id="eVK-8C-45m"/>
                         </constraints>
-                        <variation key="heightClass=regular-widthClass=compact"/>
                     </view>
                     <connections>
-                        <outlet property="flipsLabel" destination="o71-rz-2Zc" id="34C-4v-fBL"/>
+                        <outlet property="flipsLabel" destination="jZ4-vR-Hu8" id="ZG3-VA-4jP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
