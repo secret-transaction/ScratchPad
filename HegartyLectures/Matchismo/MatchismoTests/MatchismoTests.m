@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Card.h"
 
 @interface MatchismoTests : XCTestCase
 
@@ -26,7 +27,15 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
+    Card *card = [Card new];
+    card.contents = @"Lollll";
+    
+    NSLog(@"Contents: %@", card.contents);
+    
+    NSLog(@"%@", [card doSomethingPrime:@"p1" :@"p2" :1]);
+    
+    NSLog(@"%@", [card doSomething:@"p1" withName:@"myName" andAge:111]);
+    
     XCTAssert(YES, @"Pass");
 }
 
