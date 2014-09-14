@@ -12,6 +12,7 @@
 
 @property (nonatomic, readwrite) NSInteger score;
 @property (strong, nonatomic) NSMutableArray *cards;
+@property (nonatomic, readwrite) NSUInteger matchCardCount; //minimum cards to match
 
 @end
 
@@ -26,11 +27,13 @@ static const int COST_TO_CHOOSE = 1;
     return nil;
 }
 
-- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
+- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck matchCardCount:(NSUInteger)cardCount
 {
     self = [super init];
     
     if (self) {
+        self.matchCardCount = cardCount;
+        
         for (int i= 0; i < count; i++) {
             Card *card = [deck drawRandomCard];
             
@@ -54,27 +57,41 @@ static const int COST_TO_CHOOSE = 1;
         if (card.isChosen) {
             card.chosen = NO;
         } else {
+            NSMutableArray *chosenCards = [[NSMutableArray alloc] init];
+            
             for (Card *otherCard in self.cards) {
                 //match against other cards
                 if (otherCard.isChosen && !otherCard.isMatched) {
-                    int score = [card match:@[otherCard]];
-                    
-                    if (score) {
-                        otherCard.matched = YES;
-                        card.matched = YES;
-                        
-                        self.score += score * MATCH_BONUS;
-                    } else {
-                        otherCard.chosen = NO;
-                        
-                        self.score -= MISMATCH_PENALTY;
-                    }
-                    
-                    break;
+                    [chosenCards addObject:otherCard];
                 }
             }
             
-            card.chosen = YES;
+            if ([chosenCards count] == self.matchCardCount) {
+                NSLog(@"We have enough cards to match. Start Matching.");
+                int score = [card match:chosenCards];
+                NSLog(@"Score: %d", score);
+                
+                if (score) {
+                    for (Card *otherCard in chosenCards) {
+                        otherCard.matched = YES;
+                    }
+                    card.matched = YES;
+                    card.chosen = YES;
+                    
+                    self.score += score * MATCH_BONUS;
+                } else {
+                    for (Card *otherCard in chosenCards) {
+                        otherCard.chosen = NO;
+                    }
+                    card.chosen = NO;
+                    
+                    self.score -= MISMATCH_PENALTY;
+                }
+
+            } else {
+                NSLog(@"Not Enough Cards. We need %d", self.matchCardCount);
+                card.chosen = YES;
+            }
         }
         self.score -= COST_TO_CHOOSE;
     }

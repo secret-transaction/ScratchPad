@@ -12,10 +12,13 @@
 @interface CardMatchingGame : NSObject
 
 #pragma mark - Initializers
-- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck;
+- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck matchCardCount:(NSUInteger)cardCount;
 
 #pragma mark - Properties
 @property (nonatomic, readonly) NSInteger score;
+
+//number of cards flipped up before doing a match
+@property (nonatomic, readonly) NSUInteger matchCardCount;
 
 #pragma mark - Methods
 - (void)chooseCardAtIndex:(NSUInteger)index;
