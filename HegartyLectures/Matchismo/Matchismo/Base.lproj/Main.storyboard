@@ -167,6 +167,9 @@
                                     <segment title="2-Card Match Mode"/>
                                     <segment title="3-Card Match Mode"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeGameMode" destination="BYZ-38-t0r" eventType="valueChanged" id="spE-RW-ouj"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>

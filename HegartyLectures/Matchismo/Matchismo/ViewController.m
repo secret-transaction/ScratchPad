@@ -25,16 +25,22 @@
 {
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[self createDeck] matchCardCount:self.modeSegmentControl.selectedSegmentIndex==0 ? 1 : 2];
+        NSLog(@"Created a new Game [%@]", _game);
     }
     
     return _game;
 }
 
+- (IBAction)changeGameMode {
+    self.game = nil;
+    [self updateUI];
+}
+
 - (IBAction)dealCard:(UIButton *)sender {
     NSLog(@"Deal!");
     
-    self.game = nil;
     self.modeSegmentControl.enabled = YES;
+    self.game = nil;
     [self updateUI];
 }
 

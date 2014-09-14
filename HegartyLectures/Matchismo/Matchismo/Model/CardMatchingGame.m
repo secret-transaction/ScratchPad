@@ -111,4 +111,9 @@ static const int COST_TO_CHOOSE = 1;
     return _cards;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"CardMatchingGame[%d]:%d", self.matchCardCount, self.score];
+}
+
 @end
