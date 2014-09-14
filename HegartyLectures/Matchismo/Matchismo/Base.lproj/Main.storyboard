@@ -28,6 +28,16 @@
                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHI-hV-CiJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7v-km-b90">
+                                <rect key="frame" x="268" y="340" width="64" height="96"/>
+                                <state key="normal" backgroundImage="cardback">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfW-TH-dXa"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwF-FI-jmz">
                                 <rect key="frame" x="16" y="132" width="64" height="96"/>
                                 <state key="normal" backgroundImage="cardback">
@@ -137,14 +147,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7v-km-b90">
-                                <rect key="frame" x="268" y="340" width="64" height="96"/>
-                                <state key="normal" backgroundImage="cardback">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryt-16-Fb3">
+                                <rect key="frame" x="238" y="521" width="124" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="nId-hh-NY4"/>
+                                </constraints>
+                                <state key="normal" title="Deal Cards">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfW-TH-dXa"/>
+                                    <action selector="dealCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWc-Lp-bN7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,6 +174,7 @@
                             <constraint firstItem="SwF-FI-jmz" firstAttribute="top" secondItem="hq4-Bz-TVr" secondAttribute="bottom" constant="8" symbolic="YES" id="8jn-RP-wuJ"/>
                             <constraint firstItem="hLb-Fw-VZT" firstAttribute="baseline" secondItem="Egr-b8-JdW" secondAttribute="baseline" id="Afp-Mc-Stj"/>
                             <constraint firstItem="hq4-Bz-TVr" firstAttribute="firstBaseline" secondItem="CN2-77-n3M" secondAttribute="firstBaseline" id="CVk-vU-2NJ"/>
+                            <constraint firstItem="Ryt-16-Fb3" firstAttribute="centerX" secondItem="A6V-8l-5gz" secondAttribute="centerX" id="CZt-TF-JZr"/>
                             <constraint firstItem="21M-mP-UU1" firstAttribute="firstBaseline" secondItem="Egr-b8-JdW" secondAttribute="firstBaseline" id="DAr-n9-5ON"/>
                             <constraint firstItem="r7v-km-b90" firstAttribute="leading" secondItem="21M-mP-UU1" secondAttribute="leading" id="Edh-fq-tai"/>
                             <constraint firstItem="hq4-Bz-TVr" firstAttribute="baseline" secondItem="CN2-77-n3M" secondAttribute="baseline" id="H7Y-Uh-zHB"/>
@@ -200,6 +215,7 @@
                             <constraint firstItem="A6V-8l-5gz" firstAttribute="leading" secondItem="6h0-Mt-qSC" secondAttribute="leading" id="xIS-F8-Jkh"/>
                             <constraint firstItem="hq4-Bz-TVr" firstAttribute="top" secondItem="5gE-DE-avD" secondAttribute="top" id="yln-tk-CGs"/>
                             <constraint firstItem="Egr-b8-JdW" firstAttribute="leading" secondItem="rDG-Pm-mhv" secondAttribute="leading" id="z4I-vA-aJq"/>
+                            <constraint firstItem="A6V-8l-5gz" firstAttribute="top" secondItem="Ryt-16-Fb3" secondAttribute="bottom" constant="8" symbolic="YES" id="zNd-J4-0Zb"/>
                             <constraint firstItem="cxr-mD-WgT" firstAttribute="firstBaseline" secondItem="6h0-Mt-qSC" secondAttribute="firstBaseline" id="zUK-pL-ohZ"/>
                         </constraints>
                     </view>
