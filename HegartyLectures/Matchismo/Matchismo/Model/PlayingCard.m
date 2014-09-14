@@ -42,9 +42,26 @@
     }
 }
 
+- (int)match:(NSArray *)cards
+{
+    int score = 0;
+    
+    for (PlayingCard *card in cards) {
+        if (card.rank == self.rank) {
+            score += 1;
+        }
+        
+        if ([card.suit isEqualToString:self.suit]) {
+            score += 4;
+        }
+    }
+    
+    return score;
+}
+
 + (NSArray *)validSuits
 {
-    return @[@"♦︎", @"♥︎", @"♣︎", @"♠︎"];
+    return @[@"♢", @"❤️", @"♣︎", @"♠︎"];
 }
 
 + (NSArray *)rankStrings
