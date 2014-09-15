@@ -144,7 +144,6 @@
                                     <constraint firstAttribute="height" constant="21" id="2xi-pm-8GV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryt-16-Fb3">
@@ -167,7 +166,6 @@
                                     <segment title="2-Card Match Mode"/>
                                     <segment title="3-Card Match Mode"/>
                                 </segments>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="changeGameMode" destination="BYZ-38-t0r" eventType="valueChanged" id="spE-RW-ouj"/>
                                 </connections>
@@ -259,4 +257,5 @@
     <resources>
         <image name="cardback" width="64" height="96"/>
     </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
