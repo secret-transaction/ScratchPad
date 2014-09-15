@@ -25,4 +25,16 @@
     [self.textBody.textStorage addAttributes:@{NSForegroundColorAttributeName:sender.backgroundColor} range:self.textBody.selectedRange];
 }
 
+- (IBAction)outline
+{
+    [self.textBody.textStorage addAttributes:@{NSStrokeWidthAttributeName:[NSNumber numberWithFloat:-3.0],
+                                               NSStrokeColorAttributeName:[UIColor blackColor]}
+                                       range:self.textBody.selectedRange];
+}
+
+- (IBAction)unoutline
+{
+    [self.textBody.textStorage removeAttribute:NSStrokeWidthAttributeName range:self.textBody.selectedRange];
+}
+
 @end
