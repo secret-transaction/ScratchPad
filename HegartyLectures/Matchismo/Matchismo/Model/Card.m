@@ -44,6 +44,7 @@
 
 - (NSString *)doSomething:(NSString *)param1 withName:(NSString *)name andAge:(int)age
 {
+    NSLog(@"Running Crap: %@, %@, %d", param1, name, age);
     return [NSString stringWithFormat:@"doSomething: %@ %@, %i", param1, name, age];
 }
 

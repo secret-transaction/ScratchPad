@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "Card.h"
+#import "PlayingCard.h"
 
 @interface MatchismoTests : XCTestCase
 
@@ -27,15 +27,19 @@
 }
 
 - (void)testExample {
-    Card *card = [Card new];
-    card.contents = @"Lollll";
+    PlayingCard *card = [PlayingCard new];
     
-    NSLog(@"Contents: %@", card.contents);
+    NSLog(@"isKindOfClass: %i", [card isKindOfClass:[Card class]]);
+    NSLog(@"isMemberOfClass: %i", [card isMemberOfClass:[Card class]]);
     
-    NSLog(@"%@", [card doSomethingPrime:@"p1" :@"p2" :1]);
+    SEL matchSelector = @selector(match:);
+    NSLog(@"respondsToSelector: %i", [card respondsToSelector:matchSelector]);
     
-    NSLog(@"%@", [card doSomething:@"p1" withName:@"myName" andAge:111]);
-    
+    //- (NSString *)doSomethingPrime:(NSString *)param1 :(NSString *)param2 :(int)param3;
+    SEL doSomethingPrimeSelector = @selector(doSomething:withName:andAge:);
+    NSArray *param = [NSArray arrayWithObjects:@"lol1", @"lol2", @233, nil];
+    [card performSelector:doSomethingPrimeSelector withObject:param];
+    NSLog(@"Done Performing Selector");
     XCTAssert(YES, @"Pass");
 }
 
