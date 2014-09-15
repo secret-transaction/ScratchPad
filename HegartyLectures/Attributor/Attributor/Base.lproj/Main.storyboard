@@ -62,6 +62,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateColorOfSelectedText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRm-dB-ckX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2s-Nm-8hG">
                                 <rect key="frame" x="340" y="432" width="64" height="64"/>
@@ -72,6 +75,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateColorOfSelectedText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQv-8U-1r3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvo-Jv-Qmq">
                                 <rect key="frame" x="196" y="432" width="64" height="64"/>
@@ -82,6 +88,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateColorOfSelectedText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cod-iL-ssV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN7-qY-aYP">
                                 <rect key="frame" x="124" y="432" width="64" height="64"/>
@@ -93,6 +102,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateColorOfSelectedText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HG6-fx-fVP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncQ-Y6-tOb">
                                 <rect key="frame" x="412" y="432" width="64" height="64"/>
@@ -103,6 +115,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateColorOfSelectedText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="022-br-2TI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -153,6 +168,9 @@
                             <constraint firstItem="GN7-qY-aYP" firstAttribute="firstBaseline" secondItem="T2s-Nm-8hG" secondAttribute="firstBaseline" id="zLE-0M-TVh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textBody" destination="BKU-Ua-fco" id="VpB-FE-gp9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
