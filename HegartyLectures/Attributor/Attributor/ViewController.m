@@ -22,7 +22,7 @@
 
 - (IBAction)updateColorOfSelectedText:(UIButton *)sender
 {
-    [self.textBody.textStorage setAttributes:@{NSForegroundColorAttributeName:sender.backgroundColor} range:self.textBody.selectedRange];
+    [self.textBody.textStorage addAttributes:@{NSForegroundColorAttributeName:sender.backgroundColor} range:self.textBody.selectedRange];
 }
 
 @end
