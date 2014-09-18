@@ -36,9 +36,9 @@
     NSLog(@"respondsToSelector: %i", [card respondsToSelector:matchSelector]);
     
     //- (NSString *)doSomethingPrime:(NSString *)param1 :(NSString *)param2 :(int)param3;
-    SEL doSomethingPrimeSelector = @selector(doSomething:withName:andAge:);
-    NSArray *param = [NSArray arrayWithObjects:@"lol1", @"lol2", @233, nil];
-    [card performSelector:doSomethingPrimeSelector withObject:param];
+    //SEL doSomethingPrimeSelector = @selector(doSomething:withName:andAge:);
+    //NSArray *param = [NSArray arrayWithObjects:@"lol1", @"lol2", @233, nil];
+    //[card performSelector:doSomethingPrimeSelector withObject:param];
     NSLog(@"Done Performing Selector");
     XCTAssert(YES, @"Pass");
 }

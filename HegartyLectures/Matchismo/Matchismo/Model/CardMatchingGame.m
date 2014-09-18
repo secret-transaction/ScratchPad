@@ -87,14 +87,30 @@ static const int COST_TO_CHOOSE = 1;
                     
                     self.score -= MISMATCH_PENALTY;
                 }
-
+                
+                NSString *cardStrings = card.contents;
+                for (Card *otherCard in chosenCards) {
+                    cardStrings = [NSString stringWithFormat:@"%@ %@", cardStrings, otherCard.contents];
+                }
+                
+                [self.results addObject:[NSString stringWithFormat:@"%@ for %d", cardStrings, score]];
             } else {
-                NSLog(@"Not Enough Cards. We need %d", self.matchCardCount);
+                NSLog(@"Not Enough Cards. We need %lul", (unsigned long)self.matchCardCount);
                 card.chosen = YES;
+                [self.results addObject:card.contents];
             }
         }
         self.score -= COST_TO_CHOOSE;
     }
+}
+
+- (NSMutableArray *)results
+{
+    if (!_results) {
+        _results = [NSMutableArray new];
+    }
+    
+    return _results;
 }
 
 - (Card *)cardAtIndex:(NSUInteger)index
@@ -113,7 +129,7 @@ static const int COST_TO_CHOOSE = 1;
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"CardMatchingGame[%d]:%d", self.matchCardCount, self.score];
+    return [NSString stringWithFormat:@"CardMatchingGame[%lu]:%ld", (unsigned long)self.matchCardCount, (long)self.score];
 }
 
 @end

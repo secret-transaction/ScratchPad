@@ -20,6 +20,8 @@
 //number of cards flipped up before doing a match
 @property (nonatomic, readonly) NSUInteger matchCardCount;
 
+@property (strong, nonatomic) NSMutableArray *results; //of NSString
+
 #pragma mark - Methods
 - (void)chooseCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;

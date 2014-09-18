@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *modeSegmentControl;
+@property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
+@property (weak, nonatomic) IBOutlet UISlider *resultSlider;
 
 @end
 
@@ -54,6 +56,12 @@
     [self updateUI];
 }
 
+- (IBAction)updateHistory:(UISlider *)sender
+{
+    int val = (int)sender.value;
+    self.resultsLabel.text = self.game.results[val];
+}
+
 - (void)updateUI
 {
     for (UIButton *cardButton in self.cardButtons) {
@@ -70,6 +78,9 @@
     }
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%ld", (long)self.game.score];
+    self.resultsLabel.text = [self.game.results lastObject];
+    self.resultSlider.maximumValue = [self.game.results count];
+    self.resultSlider.value = [self.game.results count];
 }
 
 - (Deck *)createDeck
