@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "IndieViewController.h"
 
 @interface ViewController ()
 
@@ -36,6 +37,14 @@
 {
     NSLog(@"Should we allow this segue? %@", identifier);
     return YES;
+}
+
+//create a VC without using segue
+- (IBAction)startIndie
+{
+    NSString *restorationId = @"indieViewController";
+    IndieViewController *ivc = [self.storyboard instantiateViewControllerWithIdentifier:restorationId];
+    [self.navigationController pushViewController:ivc animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

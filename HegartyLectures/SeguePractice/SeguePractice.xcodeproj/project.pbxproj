@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E914A36D19CD8386001EC961 /* IndieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E914A36C19CD8386001EC961 /* IndieViewController.m */; };
 		E98D91D119CD5F0800AF630A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D91D019CD5F0800AF630A /* main.m */; };
 		E98D91D419CD5F0800AF630A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D91D319CD5F0800AF630A /* AppDelegate.m */; };
 		E98D91D719CD5F0800AF630A /* SeguePractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E98D91D519CD5F0800AF630A /* SeguePractice.xcdatamodeld */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E914A36B19CD8386001EC961 /* IndieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndieViewController.h; sourceTree = "<group>"; };
+		E914A36C19CD8386001EC961 /* IndieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndieViewController.m; sourceTree = "<group>"; };
 		E98D91CB19CD5F0800AF630A /* SeguePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeguePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D91CF19CD5F0800AF630A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E98D91D019CD5F0800AF630A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 			children = (
 				E98D91D219CD5F0800AF630A /* AppDelegate.h */,
 				E98D91D319CD5F0800AF630A /* AppDelegate.m */,
+				E914A36B19CD8386001EC961 /* IndieViewController.h */,
+				E914A36C19CD8386001EC961 /* IndieViewController.m */,
 				E98D91FA19CD74A700AF630A /* NormalViewController.h */,
 				E98D91FB19CD74A700AF630A /* NormalViewController.m */,
 				E98D91F719CD746D00AF630A /* ManualViewController.h */,
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E914A36D19CD8386001EC961 /* IndieViewController.m in Sources */,
 				E98D91D419CD5F0800AF630A /* AppDelegate.m in Sources */,
 				E98D91D719CD5F0800AF630A /* SeguePractice.xcdatamodeld in Sources */,
 				E98D91DA19CD5F0800AF630A /* ViewController.m in Sources */,
@@ -436,6 +442,7 @@
 				E98D91F319CD5F0800AF630A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E98D91F419CD5F0800AF630A /* Build configuration list for PBXNativeTarget "SeguePracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				E98D91F619CD5F0800AF630A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
