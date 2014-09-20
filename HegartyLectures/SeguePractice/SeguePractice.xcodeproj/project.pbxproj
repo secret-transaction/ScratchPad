@@ -15,6 +15,9 @@
 		E98D91DF19CD5F0800AF630A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98D91DE19CD5F0800AF630A /* Images.xcassets */; };
 		E98D91E219CD5F0800AF630A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98D91E019CD5F0800AF630A /* LaunchScreen.xib */; };
 		E98D91EE19CD5F0800AF630A /* SeguePracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D91ED19CD5F0800AF630A /* SeguePracticeTests.m */; };
+		E98D91F919CD746D00AF630A /* ManualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D91F819CD746D00AF630A /* ManualViewController.m */; };
+		E98D91FC19CD74A700AF630A /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D91FB19CD74A700AF630A /* NormalViewController.m */; };
+		E98D91FF19CD796800AF630A /* ManualViewTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D91FE19CD796800AF630A /* ManualViewTwoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 		E98D91E719CD5F0800AF630A /* SeguePracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeguePracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D91EC19CD5F0800AF630A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E98D91ED19CD5F0800AF630A /* SeguePracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeguePracticeTests.m; sourceTree = "<group>"; };
+		E98D91F719CD746D00AF630A /* ManualViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualViewController.h; sourceTree = "<group>"; };
+		E98D91F819CD746D00AF630A /* ManualViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualViewController.m; sourceTree = "<group>"; };
+		E98D91FA19CD74A700AF630A /* NormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
+		E98D91FB19CD74A700AF630A /* NormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
+		E98D91FD19CD796800AF630A /* ManualViewTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualViewTwoViewController.h; sourceTree = "<group>"; };
+		E98D91FE19CD796800AF630A /* ManualViewTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualViewTwoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,12 @@
 			children = (
 				E98D91D219CD5F0800AF630A /* AppDelegate.h */,
 				E98D91D319CD5F0800AF630A /* AppDelegate.m */,
+				E98D91FA19CD74A700AF630A /* NormalViewController.h */,
+				E98D91FB19CD74A700AF630A /* NormalViewController.m */,
+				E98D91F719CD746D00AF630A /* ManualViewController.h */,
+				E98D91F819CD746D00AF630A /* ManualViewController.m */,
+				E98D91FD19CD796800AF630A /* ManualViewTwoViewController.h */,
+				E98D91FE19CD796800AF630A /* ManualViewTwoViewController.m */,
 				E98D91D819CD5F0800AF630A /* ViewController.h */,
 				E98D91D919CD5F0800AF630A /* ViewController.m */,
 				E98D91DB19CD5F0800AF630A /* Main.storyboard */,
@@ -225,7 +240,10 @@
 				E98D91D419CD5F0800AF630A /* AppDelegate.m in Sources */,
 				E98D91D719CD5F0800AF630A /* SeguePractice.xcdatamodeld in Sources */,
 				E98D91DA19CD5F0800AF630A /* ViewController.m in Sources */,
+				E98D91F919CD746D00AF630A /* ManualViewController.m in Sources */,
 				E98D91D119CD5F0800AF630A /* main.m in Sources */,
+				E98D91FC19CD74A700AF630A /* NormalViewController.m in Sources */,
+				E98D91FF19CD796800AF630A /* ManualViewTwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

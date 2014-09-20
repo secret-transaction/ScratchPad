@@ -14,14 +14,33 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//note: only gets triggered when segue is done in UI (manual segue skips this part)
+- (IBAction)manualSegueTriggered:(UIButton *)sender
+{
+    [self performSegueWithIdentifier:@"manualSegue" sender:self];
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    NSLog(@"Should we allow this segue? %@", identifier);
+    return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"Prepare for Segue: %@ [%@ -> %@]", segue.identifier, [segue.sourceViewController class], [segue.destinationViewController class]);
 }
 
 @end
