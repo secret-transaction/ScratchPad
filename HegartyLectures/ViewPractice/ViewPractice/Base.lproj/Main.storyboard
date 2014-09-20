@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DeX-mU-iz1">
+                                <rect key="frame" x="179" y="169" width="243" height="261"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llH-Ks-SNz">
+                                        <rect key="frame" x="43" y="39" width="157" height="183"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fD0-9S-Pfi">
+                                        <rect key="frame" x="60" y="65" width="122" height="131"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="llH-Ks-SNz" secondAttribute="centerX" id="51p-mf-kAW"/>
+                                    <constraint firstAttribute="centerY" secondItem="llH-Ks-SNz" secondAttribute="centerY" id="EQV-gN-wux"/>
+                                    <constraint firstItem="fD0-9S-Pfi" firstAttribute="centerY" secondItem="llH-Ks-SNz" secondAttribute="centerY" id="ZKG-EO-QHj"/>
+                                    <constraint firstItem="fD0-9S-Pfi" firstAttribute="centerX" secondItem="llH-Ks-SNz" secondAttribute="centerX" constant="-0.5" id="vRm-Hy-AYX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hc-PL-Cql">
+                                <rect key="frame" x="255" y="28" width="91" height="30"/>
+                                <state key="normal" title="Add View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addView" destination="BYZ-38-t0r" eventType="touchUpInside" id="3UF-Fq-8nu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9hc-PL-Cql" secondAttribute="centerX" constant="-0.5" id="Vyv-BI-CKw"/>
+                            <constraint firstItem="9hc-PL-Cql" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fBB-Oc-tyV"/>
+                            <constraint firstAttribute="centerY" secondItem="DeX-mU-iz1" secondAttribute="centerY" constant="0.5" id="fGD-3P-qGo"/>
+                            <constraint firstAttribute="centerX" secondItem="DeX-mU-iz1" secondAttribute="centerX" constant="-0.5" id="rI9-kX-oGW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="green" destination="fD0-9S-Pfi" id="sIj-rM-WS7"/>
+                        <outlet property="red" destination="DeX-mU-iz1" id="MNb-8a-fz5"/>
+                        <outlet property="white" destination="llH-Ks-SNz" id="tdn-Q6-xn6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="660"/>
+        </scene>
+    </scenes>
+</document>
