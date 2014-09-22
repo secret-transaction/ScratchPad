@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BezierPathTriangle.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *red;
@@ -20,14 +21,14 @@
 
 - (IBAction)addView
 {
-    CGPoint origin = CGPointMake(5.0, 5.0);
-    CGSize size = CGSizeMake(50.0, 50.0);
+    //CGPoint origin = CGPointMake(5.0, 5.0);
+    //CGSize size = CGSizeMake(50.0, 50.0);
     
     CGRect rect = CGRectMake(self.origin + 5.0, self.origin + 5.0, 50.0, 50.0);
     
     self.origin += 50.0;
     
-    UIView *view = [[UIView alloc] initWithFrame:rect];
+    UIView *view = [[BezierPathTriangle alloc] initWithFrame:rect];
     view.backgroundColor = [UIColor purpleColor];
     
     [self.red addSubview:view];

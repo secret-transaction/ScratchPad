@@ -15,6 +15,7 @@
 		E96280D819CDDF1000BE1388 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96280D719CDDF1000BE1388 /* Images.xcassets */; };
 		E96280DB19CDDF1000BE1388 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96280D919CDDF1000BE1388 /* LaunchScreen.xib */; };
 		E96280E719CDDF1100BE1388 /* ViewPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E96280E619CDDF1100BE1388 /* ViewPracticeTests.m */; };
+		E9B4A45C19CFE5FB00F2FDFD /* BezierPathTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B4A45B19CFE5FB00F2FDFD /* BezierPathTriangle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		E96280E019CDDF1100BE1388 /* ViewPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96280E519CDDF1100BE1388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E96280E619CDDF1100BE1388 /* ViewPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewPracticeTests.m; sourceTree = "<group>"; };
+		E9B4A45A19CFE5FB00F2FDFD /* BezierPathTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathTriangle.h; sourceTree = "<group>"; };
+		E9B4A45B19CFE5FB00F2FDFD /* BezierPathTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathTriangle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				E96280D919CDDF1000BE1388 /* LaunchScreen.xib */,
 				E96280CE19CDDF1000BE1388 /* ViewPractice.xcdatamodeld */,
 				E96280C719CDDF1000BE1388 /* Supporting Files */,
+				E9B4A45A19CFE5FB00F2FDFD /* BezierPathTriangle.h */,
+				E9B4A45B19CFE5FB00F2FDFD /* BezierPathTriangle.m */,
 			);
 			path = ViewPractice;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				E96280D019CDDF1000BE1388 /* ViewPractice.xcdatamodeld in Sources */,
 				E96280D319CDDF1000BE1388 /* ViewController.m in Sources */,
 				E96280CA19CDDF1000BE1388 /* main.m in Sources */,
+				E9B4A45C19CFE5FB00F2FDFD /* BezierPathTriangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +424,7 @@
 				E96280EC19CDDF1100BE1388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E96280ED19CDDF1100BE1388 /* Build configuration list for PBXNativeTarget "ViewPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				E96280EF19CDDF1100BE1388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
