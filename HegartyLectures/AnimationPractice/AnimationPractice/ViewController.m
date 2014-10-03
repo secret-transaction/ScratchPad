@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *whiteBox;
 
 @end
 
@@ -16,12 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)changeGravity:(id)sender
+{
+}
+
+- (IBAction)startAnimation:(id)sender
+{
+    [UIView animateWithDuration:3.0 animations:^{
+        self.whiteBox.alpha = 0.5;
+        
+        CGRect rect = self.whiteBox.frame;
+        self.whiteBox.frame = CGRectMake(rect.origin.x+(rect.size.width/4), rect.origin.y+(rect.size.height/4), rect.size.width/2, rect.size.height/2);
+    }];
 }
 
 @end
