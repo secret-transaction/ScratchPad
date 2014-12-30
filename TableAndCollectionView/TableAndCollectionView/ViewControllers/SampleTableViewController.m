@@ -34,21 +34,35 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 20;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2000;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XibTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"xibSimpleCell" forIndexPath:indexPath];
     cell.customLabel.text = [NSString stringWithFormat:@"Label: %li", (long)indexPath.row];
     
-    //cell.textLabel.text = [NSString stringWithFormat:@"Test %ld", (long)indexPath.row];
-    //rcell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0];
-    
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [NSString stringWithFormat:@"Header %i", section];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    return [NSString stringWithFormat:@"Footer %i", section];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    NSMutableArray *arr = [NSMutableArray new];
+    for (int i = 0; i < [self numberOfSectionsInTableView:tableView]; i++) {
+        arr[i] = [NSString stringWithFormat:@"L%i", i];
+    }
+    
+    return arr;
 }
 
 /*
