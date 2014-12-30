@@ -1,5 +1,5 @@
 //
-//  SampleTableViewController.h
+//  SimpleTableViewCell.h
 //  TableAndCollectionView
 //
 //  Created by Lyndon Michael Bibera on 12/30/14.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SimpleTableViewCell.h"
-#import "XibTableViewCell.h"
 
-@interface SampleTableViewController : UITableViewController
+//implementing a cell by overriding layoutSubViews
+@interface SimpleTableViewCell : UITableViewCell
 
 @end

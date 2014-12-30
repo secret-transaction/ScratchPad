@@ -17,41 +17,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //registration:
+    //1. using storyboard identifier
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //2. manual class registration
+    [self.tableView registerClass:[SimpleTableViewCell class] forCellReuseIdentifier:@"overrideSimpleCell"];
+    
+    //3. xib registration
+    [self.tableView registerNib:[UINib nibWithNibName:@"XibTableViewCell" bundle:nil] forCellReuseIdentifier:@"xibSimpleCell"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 2000;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    XibTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"xibSimpleCell" forIndexPath:indexPath];
+    cell.customLabel.text = [NSString stringWithFormat:@"Label: %li", (long)indexPath.row];
     
-    // Configure the cell...
+    //cell.textLabel.text = [NSString stringWithFormat:@"Test %ld", (long)indexPath.row];
+    //rcell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

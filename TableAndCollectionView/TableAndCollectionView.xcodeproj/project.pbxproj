@@ -15,6 +15,9 @@
 		E9B95B8A1A5276180053D681 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B95B881A5276180053D681 /* LaunchScreen.xib */; };
 		E9B95B961A5276180053D681 /* TableAndCollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B95B951A5276180053D681 /* TableAndCollectionViewTests.m */; };
 		E9B95BA31A5276CB0053D681 /* SampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B95BA21A5276CB0053D681 /* SampleTableViewController.m */; };
+		E9B95BA71A5281ED0053D681 /* SimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B95BA61A5281ED0053D681 /* SimpleTableViewCell.m */; };
+		E9B95BAD1A5283C90053D681 /* XibTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B95BAB1A5283C90053D681 /* XibTableViewCell.m */; };
+		E9B95BAE1A5283C90053D681 /* XibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B95BAC1A5283C90053D681 /* XibTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,11 @@
 		E9B95B951A5276180053D681 /* TableAndCollectionViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableAndCollectionViewTests.m; sourceTree = "<group>"; };
 		E9B95BA11A5276CB0053D681 /* SampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTableViewController.h; sourceTree = "<group>"; };
 		E9B95BA21A5276CB0053D681 /* SampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTableViewController.m; sourceTree = "<group>"; };
+		E9B95BA51A5281ED0053D681 /* SimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewCell.h; sourceTree = "<group>"; };
+		E9B95BA61A5281ED0053D681 /* SimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewCell.m; sourceTree = "<group>"; };
+		E9B95BAA1A5283C90053D681 /* XibTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibTableViewCell.h; sourceTree = "<group>"; };
+		E9B95BAB1A5283C90053D681 /* XibTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibTableViewCell.m; sourceTree = "<group>"; };
+		E9B95BAC1A5283C90053D681 /* XibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XibTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		E9B95B751A5276180053D681 /* TableAndCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				E9B95BA41A52814A0053D681 /* Views */,
 				E9B95BA01A5276710053D681 /* ViewControllers */,
 				E9B95B9F1A5276340053D681 /* Application */,
 				E9B95B761A5276180053D681 /* Supporting Files */,
@@ -136,6 +145,18 @@
 				E9B95BA21A5276CB0053D681 /* SampleTableViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E9B95BA41A52814A0053D681 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9B95BA51A5281ED0053D681 /* SimpleTableViewCell.h */,
+				E9B95BA61A5281ED0053D681 /* SimpleTableViewCell.m */,
+				E9B95BAA1A5283C90053D681 /* XibTableViewCell.h */,
+				E9B95BAB1A5283C90053D681 /* XibTableViewCell.m */,
+				E9B95BAC1A5283C90053D681 /* XibTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +242,7 @@
 				E9B95B851A5276180053D681 /* Main.storyboard in Resources */,
 				E9B95B8A1A5276180053D681 /* LaunchScreen.xib in Resources */,
 				E9B95B871A5276180053D681 /* Images.xcassets in Resources */,
+				E9B95BAE1A5283C90053D681 /* XibTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +263,8 @@
 				E9B95B7C1A5276180053D681 /* AppDelegate.m in Sources */,
 				E9B95B7F1A5276180053D681 /* TableAndCollectionView.xcdatamodeld in Sources */,
 				E9B95B791A5276180053D681 /* main.m in Sources */,
+				E9B95BAD1A5283C90053D681 /* XibTableViewCell.m in Sources */,
+				E9B95BA71A5281ED0053D681 /* SimpleTableViewCell.m in Sources */,
 				E9B95BA31A5276CB0053D681 /* SampleTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
